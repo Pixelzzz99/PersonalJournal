@@ -1,13 +1,10 @@
 import "./CardButton.css";
 
-function CardButton({ children, className }) {
+function CardButton({ children, className, ...props }) {
   const cl = className ? `card-button ${className}` : "card-button";
-  const clicked = () => {
-    alert("Hello");
-  };
 
   return (
-    <button onClick={clicked} className={cl}>
+    <button {...props} className={cl}>
       {children}
     </button>
   );

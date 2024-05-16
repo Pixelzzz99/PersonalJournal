@@ -1,4 +1,5 @@
 import "./Button.css";
+import { memo } from "react";
 
 function Button({ text, onClick }) {
   return (
@@ -8,4 +9,4 @@ function Button({ text, onClick }) {
   );
 }
 
-export default Button;
+export default memo(Button);
